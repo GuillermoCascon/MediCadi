@@ -4,6 +4,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 
+import ProtectedRoute from "./layout/ProtectedRoute"
+import Admin from "./pages/Admin"
+
 import { AuthProvider } from "./context/AuthProvider";
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
             <Route index element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+          </Route>
+
+          <Route path="/admin" element={<ProtectedRoute />}>
+            <Route index element={<Admin />} /> 
           </Route>
         </Routes>
       </AuthProvider>

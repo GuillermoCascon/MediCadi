@@ -37,10 +37,10 @@ const Register = () => {
         setCustomAlert({})
 
         try {
-            await axiosClient.post('/users/register', { nombre, email, password })
+            await axiosClient.post('/users/register', { name, email, password })
             setCustomAlert({
                 msg: 'Cuenta creada correctamente, por favor, revise su email',
-                error: true
+                error: false
             })
         } catch (error) {
             setCustomAlert({
