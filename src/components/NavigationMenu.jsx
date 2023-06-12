@@ -14,7 +14,7 @@ const NavigationMenu = () => {
 
     return (
         <header className="flex flex-col items-start p-6 bg-teal-600 text-white">
-            <div className="flex items-center justify-between w-full mb-4">
+            <div className="flex items-center justify-between w-full ">
                 <h1 className='font-bold text-2xl text-center text-teal-200 ml-5'>
                     MEDI<span className='text-white'>CADI</span>
                 </h1>
