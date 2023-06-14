@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import LocationContext from "../context/LocationsProvider"
 
-const useLocation = () => {
+const useMyLocation = () => {
     return useContext(LocationContext)
 }
 
-export default useLocation
+export default useMyLocation

@@ -69,16 +69,16 @@ export const LocationProvider = ({ children }) => {
                 Authorization: `Bearer ${token}`
             }
         }
-        const askCosnfirm = confirm('¿Está seguro que desea eliminar esta localización?')
-        if (askCosnfirm){
-            try {
-                const {data} = await axiosClient.delete(`/locations/${id}`, config)
-                const locationsUpdated = locations.filter(locationState => locationState._id !== id)
-                setLocations(locationsUpdated)
-            } catch (error) {
-                console.log(error);
-            }
-        }
+        //const askCosnfirm = confirm('¿Está seguro que desea eliminar esta localización?')
+        // if (askCosnfirm){
+        //     try {
+        //         const {data} = await axiosClient.delete(`/locations/${id}`, config)
+        //         const locationsUpdated = locations.filter(locationState => locationState._id !== id)
+        //         setLocations(locationsUpdated)
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+        // }
     }
 
     return (

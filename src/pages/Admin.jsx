@@ -1,20 +1,16 @@
-import { Outlet, Navigate } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
 
+import useMyLocation from "../hooks/useMyLocation";
+import testData from '../helpers/testData.js'
+import LocationCard from "../components/LocationCard";
 const Admin = () => {
-
-    const {auth, loading} = useAuth()
-    if(loading) return 'Cargando...'
-
+    //const {locations} = useMyLocation()
+    const data = testData
     return (
-        <>
-            {auth?._id ?(
-                <main className="container mx-auto mt-10">
-                    <Outlet />
-                </main>
-            ): <Navigate to='/'/>}
-
-        </>
+        <div className='flex flex-col '>
+            {data.map((location, index) => (
+                <LocationCard key={index} name={location.name} icon={location.icon} />
+            ))}
+        </div>
     )
 }
 
