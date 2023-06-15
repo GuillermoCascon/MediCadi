@@ -8,21 +8,24 @@ import ProtectedRoute from "./layout/ProtectedRoute"
 import Admin from "./pages/Admin"
 
 import { AuthProvider } from "./context/AuthProvider";
+import { LocationProvider } from "./context/LocationsProvider";
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Routes>
-          <Route path="/" element={<AuthLayouth />}>
-            <Route index element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-          </Route>
+        <LocationProvider>
+          <Routes>
+            <Route path="/" element={<AuthLayouth />}>
+              <Route index element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+            </Route>
 
-          <Route path="/admin" element={<ProtectedRoute />}>
-            <Route index element={<Admin />} /> 
-          </Route>
-        </Routes>
+            <Route path="/admin" element={<ProtectedRoute />}>
+              <Route index element={<Admin />} />
+            </Route>
+          </Routes>
+        </LocationProvider>
       </AuthProvider>
 
 

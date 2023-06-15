@@ -1,5 +1,5 @@
 import React from 'react'
-import getIcon from '../helpers/getIcon'
+import getIcon from '../helpers/getIcon.js'
 import EditSVG from '../imgs/EditSVG';
 import DeleteSVG from '../imgs/DeleteSVG';
 const LocationCard = ({ name, icon }) => {
