@@ -2,6 +2,7 @@ import React from 'react'
 import getIcon from '../helpers/getIcon.js'
 import EditSVG from '../imgs/EditSVG';
 import DeleteSVG from '../imgs/DeleteSVG';
+//import LocationModal from './modals/LocationModal.jsx';
 const LocationCard = ({ name, icon }) => {
   const iconSvg = getIcon(icon);
 

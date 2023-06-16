@@ -69,6 +69,7 @@ export const LocationProvider = ({ children }) => {
                 Authorization: `Bearer ${token}`
             }
         }
+        console.log(config);
         //const askCosnfirm = confirm('¿Está seguro que desea eliminar esta localización?')
         // if (askCosnfirm){
         //     try {
