@@ -11,14 +11,14 @@ const getIcon = svg => {
             return <Ambulance />
         case 'Clinic':
             return <Clinic />
-        case 'FirstAidKit':
+        case 'Briefcase':
             return <Briefcase />
         case 'Hospital':
             return <Hospital />
         case 'Storage':
             return <Storage />
         default:
-            console.log('Default case in getIcon function - src/components/helpers/getIcon');
+            //console.log('Default case in getIcon function - src/components/helpers/getIcon');
             return;
     }
 }
