@@ -18,7 +18,7 @@ const getIcon = svg => {
         case 'Storage':
             return <Storage />
         default:
-            //console.log('Default case in getIcon function - src/components/helpers/getIcon');
+            console.log('Default case in getIcon function - src/components/helpers/getIcon');
             return;
     }
 }

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import useAuth from '../hooks/useAuth'
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import CloseSVG from '../imgs/CloseSVG'
 import HamburguerMenuSVG from '../imgs/HamburguerMenuSVG';
-const NavigationMenu = () => {
-    const { closeSession } = useAuth();
+const NavigationMenu = ({closeSession}) => {
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const isMobile = useMediaQuery({ maxWidth: 767 });
 

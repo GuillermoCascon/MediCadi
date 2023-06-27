@@ -3,18 +3,18 @@ import useAuth from "../hooks/useAuth";
 import NavigationMenu from "../components/NavigationMenu";
 import Footer from "../components/Footer"
 const ProtectedRoute = () => {
-    const { auth, loading } = useAuth()
+    const { auth, loading, closeSession } = useAuth()
     if (loading) return 'Cargando...'
     return (
-        <>
-            <NavigationMenu />
+        <div className="flex flex-col min-h-screen ">
+            <NavigationMenu closeSession={closeSession}/>
             {auth?._id?(
-                <main className="container mx-auto h-auto bg-teal-50">
+                <main className="bg-teal-50 flex-grow">
                     <Outlet />
                 </main>
             ): <Navigate to='/' />}
             <Footer />
-        </>
+        </div>
     )
 }
 

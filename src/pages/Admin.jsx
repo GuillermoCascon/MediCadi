@@ -23,7 +23,7 @@ const Admin = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center w-auto p-10">
+        <div className="flex flex-col justify-center items-center p-10">
             {data.length < 1 ? (
                 <div className='text-xl text-justify'>
                     <p>No se han encotrado localizaciones, comience creando una para gestionarla, así como sus medicamentos.</p>
@@ -36,7 +36,7 @@ const Admin = () => {
                 </div>
             )}
 
-            <div className="flex justify-center items-center font-bold text-4xl text-teal-600 rounded-full bg-neutral-200 h-10 w-10 shadow-md mt-10">
+            <div className="flex justify-center items-center font-bold text-4xl text-teal-600 rounded-full bg-gray-300 h-10 w-10 shadow-md mt-10">
                 <button onClick={handleOpenModal}>+</button>
                 
             </div>
