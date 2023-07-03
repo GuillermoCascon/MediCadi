@@ -6,20 +6,20 @@ import { useState } from "react";
 // import testData from '../helpers/testData.js'
 
 const Admin = () => {
-    const {locations} = useMyLocation()
+    const { locations } = useMyLocation()
     const data = locations
     // const data = testData
     const [modalOpen, setModalOpen] = useState(false);
     const [modalData, setModalData] = useState(null);
-  
+
     const handleOpenModal = (data) => {
-      setModalData(data);
-      setModalOpen(true);
+        setModalData(data);
+        setModalOpen(true);
     };
-  
+
     const handleCloseModal = () => {
-      setModalOpen(false);
-      setModalData(null);
+        setModalOpen(false);
+        setModalData(null);
     };
 
     return (
@@ -38,10 +38,10 @@ const Admin = () => {
 
             <div className="flex justify-center items-center font-bold text-4xl text-teal-600 rounded-full bg-gray-300 h-10 w-10 shadow-md mt-10">
                 <button onClick={handleOpenModal}>+</button>
-                
+
             </div>
             <LocationModal isOpen={modalOpen} closeModal={handleCloseModal} data={modalData} />
-            
+
         </div>
     )
 }
