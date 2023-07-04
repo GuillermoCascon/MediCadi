@@ -8,6 +8,7 @@ import ProtectedRoute from "./layout/ProtectedRoute"
 import AdminLocations from "./pages/AdminLocations"
 import EditAccount from "./pages/EditAccount";
 import ChangePassword from "./pages/ChangePassword";
+import NewPassword from "./pages/NewPassword";
 
 import { AuthProvider } from "./context/AuthProvider";
 import { LocationProvider } from "./context/LocationsProvider";
@@ -21,6 +22,7 @@ function App() {
               <Route index element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="forgot-password" element={<ForgotPassword />} />
+              <Route path="forgot-password/:token" element={<NewPassword />} />
               <Route path="confirm/:id" element={<ConfirmAccount />} />
             </Route>
 
