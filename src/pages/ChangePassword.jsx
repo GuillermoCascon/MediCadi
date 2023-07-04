@@ -1,6 +1,8 @@
 import { useState } from "react"
 import CustomAlert from "../components/CustomAlert"
 import useAuth from "../hooks/useAuth"
+import AdminNav from "../components/AdminNav"
+
 const ChangePassword = () => {
 
     const [customAlert, setCustomAlert] = useState({})
@@ -34,6 +36,7 @@ const ChangePassword = () => {
 
     return (
         <>
+            <AdminNav />
             <h2 className='font-black text-3xl text-center mt-10'>Cambio de contraseña</h2>
             <p className='text-xl mt-5 mb-10 text-center'>Modifica tu<span className='text-teal-600 font-bold'> contraseña</span></p>
             <div>
