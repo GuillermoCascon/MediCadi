@@ -6,7 +6,7 @@ import CustomAlert from "../components/CustomAlert";
 const EditAccount = () => {
 
     const { auth, updateAccount } = useAuth()
-    const { account, setAccount } = useState({})
+    const [ account, setAccount ] = useState({})
     const [customAlert, setCustomAlert] = useState({})
 
     useEffect(() => {
@@ -76,7 +76,7 @@ const EditAccount = () => {
 
                         <input
                             type="submit"
-                            value='Cambiar contraseña'
+                            value='Guardar cambios'
                             className="bg-teal-600 hover:bg-teal-800 text-white py-3 px-10 rounded-xl font-bold mt-5 hover:cursor-pointer md:w-auto"
                         />
                     </form>

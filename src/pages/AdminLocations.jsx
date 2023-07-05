@@ -5,7 +5,7 @@ import LocationModal from "../components/modals/LocationModal";
 import { useState } from "react";
 // import testData from '../helpers/testData.js'
 
-const Admin = () => {
+const AdminLocations = () => {
     const { locations } = useMyLocation()
     const data = locations
     // const data = testData
@@ -46,4 +46,4 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default AdminLocations
