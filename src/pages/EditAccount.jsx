@@ -39,7 +39,7 @@ const EditAccount = () => {
                 aquí
             </p>
             <div className="flex justify-center">
-                <div className="w-full md:w-1/2 bg-teal-50 shadow rounded-lg p-5">
+                <div className="w-full md:w-1/2 bg-teal-100 shadow rounded-lg p-5">
                     {msg && <CustomAlert
                         alrt={customAlert}
                     />}
@@ -50,7 +50,7 @@ const EditAccount = () => {
                             <label className=" uppercase font-bold text-neutral-600">Nombre</label>
                             <input
                                 type="text"
-                                className="border bg-neutral-50 w-full p-2 mt-5 rounded-lg"
+                                className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                 name="name"
                                 value={account.name || ''}
                                 onChange={e => setAccount({
@@ -64,7 +64,7 @@ const EditAccount = () => {
                             <label className=" uppercase font-bold text-neutral-600">Nombre</label>
                             <input
                                 type="email"
-                                className="border bg-neutral-50 w-full p-2 mt-5 rounded-lg"
+                                className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                 name="email"
                                 value={account.email || ''}
                                 onChange={e => setAccount({

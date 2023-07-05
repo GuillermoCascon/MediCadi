@@ -41,7 +41,7 @@ const ChangePassword = () => {
             <p className='text-xl mt-5 mb-10 text-center'>Modifica tu<span className='text-teal-600 font-bold'> contraseña</span></p>
             <div>
                 <div className='flex justify-center'>
-                    <div className="w-full md:w-1/2 bg-teal-50 shadow rounded-lg p-5">
+                    <div className="w-full md:w-1/2 bg-teal-100 shadow rounded-lg p-5">
                         {msg && <CustomAlert 
                             alrt={customAlert}
                         />}
@@ -50,7 +50,7 @@ const ChangePassword = () => {
                                 <label className='uppercase font-bold text-neutral-600'>Contraseña actual</label>
                                 <input 
                                     type="password"
-                                    className="border bg-neutral-50 w-full p-2 mt-5 rounded-lg"
+                                    className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                     name="old_pwd"
                                     placeholder="Escribe tu contraseña actual"
                                     onChange={e => setPassword({...password, [e.target.name]: e.target.value})}
@@ -60,7 +60,7 @@ const ChangePassword = () => {
                                 <label className='uppercase font-bold text-neutral-600'>Contraseña nueva</label>
                                 <input 
                                     type="password"
-                                    className="border bg-neutral-50 w-full p-2 mt-5 rounded-lg"
+                                    className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                     name="new_pwd"
                                     placeholder="Escribe tu nueva contraseña"
                                     onChange={e => setPassword({...password, [e.target.name]: e.target.value})}
