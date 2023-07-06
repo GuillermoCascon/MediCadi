@@ -20,6 +20,7 @@ const NewPassword = () => {
                 setCustomAlert({
                     msg: 'Coloca tu nueva contraseña'
                 })
+                setValidToken(true)
             } catch (e) {
                 setCustomAlert({
                     msg: 'Hubo un error con el enlace', 

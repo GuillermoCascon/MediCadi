@@ -52,6 +52,7 @@ const EditAccount = () => {
                                 type="text"
                                 className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                 name="name"
+                                placeholder="Introduce tu nombre"
                                 value={account.name || ''}
                                 onChange={e => setAccount({
                                     ...account,
@@ -66,6 +67,7 @@ const EditAccount = () => {
                                 type="email"
                                 className="border bg-teal-50 w-full p-2 mt-5 rounded-lg"
                                 name="email"
+                                placeholder="Introduce tu email"
                                 value={account.email || ''}
                                 onChange={e => setAccount({
                                     ...account,
@@ -76,7 +78,7 @@ const EditAccount = () => {
 
                         <input
                             type="submit"
-                            value='Guardar cambios'
+                            value='Actualizar cambios'
                             className="bg-teal-600 hover:bg-teal-800 text-white py-3 px-10 rounded-xl font-bold mt-5 hover:cursor-pointer md:w-auto"
                         />
                     </form>
