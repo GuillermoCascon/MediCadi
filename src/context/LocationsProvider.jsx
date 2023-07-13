@@ -32,6 +32,15 @@ export const LocationProvider = ({ children }) => {
         getLocations()
     }, [auth, locations])
 
+    const getLocation = async id => {
+        try {
+            const {data} = await axiosClient(`/locations/${id}`)
+            setLocation(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const saveLocation = async (location) => {
         const token = localStorage.getItem('token')
         console.log('saveLocation - LocationProvider' +  token);
@@ -93,6 +102,7 @@ export const LocationProvider = ({ children }) => {
                 locations,
                 saveLocation,
                 location,
+                getLocation,
                 setLocationEdition,
                 deleteLocation
             }}

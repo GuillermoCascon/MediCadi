@@ -31,7 +31,7 @@ const AdminLocations = () => {
             ) : (
                 <div className='flex flex-col w-full'>
                     {data.map((location, index) => (
-                        <LocationCard key={index} name={location.name} icon={location.icon} />
+                        <LocationCard key={index} location={location} />
                     ))}
                 </div>
             )}
