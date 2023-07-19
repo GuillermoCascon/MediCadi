@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import MedicamentContext from "../context/MedicinesProvider";
 
-const useMedicines = () => {
+const useMedicaments = () => {
     return useContext(MedicamentContext)
 }
 
-export default useMedicines
+export default useMedicaments

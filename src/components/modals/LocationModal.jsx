@@ -20,6 +20,7 @@ const LocationModal = ({ isOpen, closeModal, ...data }) => {
     useEffect(() => {
         Modal.setAppElement("body");
         //if its called from edition mode, the data will be displayed in the form
+        // ?¿?¿ check if its really needed the if
         if(data?._id){
             setId(data._id)
             setName(data.name)
